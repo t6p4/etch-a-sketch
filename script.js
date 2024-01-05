@@ -1,4 +1,5 @@
 const container = document.querySelector(".container");
+const grids = document.querySelectorAll(".grid");
 
 function createGrid() {
     let n = prompt("How big grid do you want?");
@@ -6,8 +7,13 @@ function createGrid() {
         const div = document.createElement("div");
         div.style.height = `${700 / n}px`
         div.style.width = `${700 / n}px`
-
-        div.style.backgroundColor = "red"
+        div.classList.add("grid")
         container.appendChild(div)
     }
 }
+
+container.addEventListener("mouseover", (e) => {
+    if (e.target.classList == "grid") {
+        e.target.classList.add("black");
+    }
+})
