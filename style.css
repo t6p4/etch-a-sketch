@@ -1,0 +1,15 @@
+html {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 690px;
+    width: 690px;
+    background-color: darkcyan;
+}
